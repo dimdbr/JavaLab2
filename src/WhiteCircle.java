@@ -15,6 +15,7 @@ public class WhiteCircle implements Circle{
         this.radius = radius;
     }
 
+
     @Override
     public double area() {
         return this.radius * this.radius * PI;

@@ -1,3 +1,5 @@
 public abstract class AbstractFactory {
-    public abstract BaseFactory getFactory();
+    public static BaseFactory getFactory(int factoryColor) {
+        return null;
+    }
 }

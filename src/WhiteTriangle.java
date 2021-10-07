@@ -1,4 +1,4 @@
-public class WhiteTriangle implements Triangle{
+public class WhiteTriangle extends WhiteFactory implements Triangle{
     private double A;
     private double B;
     private double C;
@@ -35,12 +35,12 @@ public class WhiteTriangle implements Triangle{
 
     @Override
     public double area() {
-        double perim = this.per() / 2;
-        return Math.sqrt(perim * (perim - this.A) * (perim - this.B) * (perim - this.C));
+        double semiPerimeter = perimeter() / 2;
+        return Math.sqrt(semiPerimeter * (semiPerimeter - this.A) * (semiPerimeter - this.B) * (semiPerimeter - this.C));
     }
 
     @Override
-    public double per() {
-        return this.A + this.B + this.C;
+    public double perimeter() {
+        return A + B + C;
     }
 }

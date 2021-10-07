@@ -1,4 +1,4 @@
-public class BlackTriangle implements Triangle{
+public class BlackTriangle extends BlackFactory implements Triangle{
     private double A;
     private double B;
     private double C;
@@ -35,12 +35,12 @@ public class BlackTriangle implements Triangle{
 
     @Override
     public double area() {
-        double perim = this.per() / 2;
-        return Math.sqrt(perim * (perim - this.A) * (perim - this.B) * (perim - this.C));
+        double perimeter = this.perimeter() / 2;
+        return Math.sqrt(perimeter * (perimeter - A) * (perimeter - B) * (perimeter - C));
     }
 
     @Override
-    public double per() {
-        return this.A + this.B + this.C;
+    public double perimeter() {
+        return A + B + C;
     }
 }

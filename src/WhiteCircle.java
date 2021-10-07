@@ -1,6 +1,6 @@
 import static java.lang.Math.PI;
 
-public class WhiteCircle implements Circle{
+public class WhiteCircle extends WhiteFactory implements Circle{
     private double radius;
 
     public double getRadius() {
@@ -18,11 +18,11 @@ public class WhiteCircle implements Circle{
 
     @Override
     public double area() {
-        return this.radius * this.radius * PI;
+        return radius * radius * PI;
     }
 
     @Override
-    public double per() {
-        return this.radius * PI * 2;
+    public double circumference() {
+        return radius * PI * 2;
     }
 }
